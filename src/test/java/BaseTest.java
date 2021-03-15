@@ -22,4 +22,6 @@ public class BaseTest {
     public void test1() {
         System.out.println(newBeeMallGoods.getNewBeeMallGoodsById(1L));
     }
+
+
 }

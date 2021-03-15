@@ -38,7 +38,7 @@ public class MybatisDemo extends BaseTest {
 
 
     @Test
-    public void test1() {
+    public void test2() {
         NewBeeMallGoodsMapper mapper = sqlSessionTemplate.getMapper(NewBeeMallGoodsMapper.class);
         List<Long> list = Arrays.asList(10897L);
         List<NewBeeMallGoods> newBeeMallGoods = mapper.selectByPrimaryKeys(list);
