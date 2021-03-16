@@ -1,12 +1,13 @@
 package ltd.newbee.mall.dao;
 
+import com.baomidou.mybatisplus.core.mapper.BaseMapper;
 import ltd.newbee.mall.entity.MallUser;
 import ltd.newbee.mall.util.PageQueryUtil;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
 
-public interface MallUserMapper {
+public interface MallUserMapper extends BaseMapper<MallUser> {
     int deleteByPrimaryKey(Long userId);
 
     int insert(MallUser record);

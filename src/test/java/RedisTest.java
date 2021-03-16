@@ -3,10 +3,12 @@ import domain.Days;
 import ltd.newbee.mall.entity.UserLike;
 import ltd.newbee.mall.entity.dto.LikedCountDTO;
 import ltd.newbee.mall.service.RedisService;
+import ltd.newbee.mall.util.RedisUtil;
 import org.junit.Before;
 import org.junit.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.data.redis.core.RedisTemplate;
+import org.springframework.data.redis.core.StringRedisTemplate;
 
 import java.util.List;
 
@@ -22,6 +24,8 @@ public class RedisTest extends BaseTest {
     private Days d;
     @Autowired
     private RedisService redisService;
+    @Autowired
+    private RedisUtil redisUtil;
 
     @Before
     public void set() {
@@ -41,12 +45,18 @@ public class RedisTest extends BaseTest {
 
     @Test
     public void dianZan1() {
-//        redisService.saveLiked2Redis("1","2");
+        redisService.saveLiked2Redis("3","4");
 //        redisService.incrementLikedCount("1");
 //        List<LikedCountDTO> likedCountFromRedis = redisService.getLikedCountFromRedis();
 //        System.out.println("likedCountFromRedis = " + likedCountFromRedis);
-        List<UserLike> likedDataFromRedis = redisService.getLikedDataFromRedis();
-        System.out.println("likedDataFromRedis = " + likedDataFromRedis);
+//        List<UserLike> likedDataFromRedis = redisService.getLikedDataFromRedis();
+//        System.out.println("likedDataFromRedis = " + likedDataFromRedis);
+    }
+
+    @Test
+    public void testRedisUtil() {
+        String days = redisUtil.get("days");
+        System.out.println(days);
     }
 
 }
