@@ -113,4 +113,22 @@ public class NewBeeMallCarouselController {
         }
     }
 
+    @PostMapping("/test1")
+    public String test1(String name) {
+        System.out.println(name);
+        return name;
+    }
+
+    @PostMapping("/test2")
+    public String test2(@RequestBody Map<String, String> map) {
+        System.out.println(map);
+        return map.get("name");
+    }
+
+    @GetMapping("/test3")
+    public String test3(String name) {
+        System.out.println(name);
+        return name;
+    }
+
 }

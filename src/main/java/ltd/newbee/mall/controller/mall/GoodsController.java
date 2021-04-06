@@ -16,6 +16,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
 import javax.servlet.http.HttpServletRequest;
+import java.util.Arrays;
 import java.util.Map;
 import java.util.Objects;
 
@@ -29,6 +30,9 @@ public class GoodsController {
 
     @GetMapping({"/search", "/search.html"})
     public String searchPage(@RequestParam Map<String, Object> params, HttpServletRequest request) {
+
+
+
         if (StringUtils.isEmpty(params.get("page"))) {
             params.put("page", 1);
         }

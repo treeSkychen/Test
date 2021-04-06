@@ -1,9 +1,11 @@
 package ltd.newbee.mall.dao;
 
 import ltd.newbee.mall.entity.NewBeeMallShoppingCartItem;
+import org.apache.ibatis.annotations.Mapper;
 import org.apache.ibatis.annotations.Param;
 
 import java.util.List;
+
 
 public interface NewBeeMallShoppingCartItemMapper {
     int deleteByPrimaryKey(Long cartItemId);

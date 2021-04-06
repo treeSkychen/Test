@@ -9,6 +9,7 @@ import ltd.newbee.mall.entity.MallUser;
 import ltd.newbee.mall.entity.ThumbLog;
 import ltd.newbee.mall.service.ThumbLogService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 import java.util.Objects;
@@ -20,6 +21,7 @@ import java.util.stream.Collectors;
  * @author: chenshutian
  * @create: 2021-03-16 11:10
  **/
+@Service
 public class ThumbLogServiceImpl implements ThumbLogService {
     private final ThumbLogMapper thumbLogMapper;
     private final ArticleMapper articleMapper;
